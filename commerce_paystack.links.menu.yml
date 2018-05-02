@@ -1,0 +1,11 @@
+commerce_paystack.admin:
+  route_name: commerce_paystack.admin
+  title: ""
+  description: "Commerce Paystack option settings area for admin"
+  parent: system.admin_config
+
+commerce_paystack.paystack_admin:
+  title: "Commerce Paystack Configuration"
+  description: "Paystack configuration option settings area for admin"
+  parent: commerce_paystack.admin
+  route_name: commerce_paystack.paystack_admin

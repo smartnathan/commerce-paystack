@@ -1,0 +1,15 @@
+commerce_paystack.admin:
+  path: '/admin/config/commerce-paystack'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Commerce Paystack Configuratiion'
+  requirements:
+    _permission: 'administer paystack'
+
+commerce_paystack.admin_configuration:
+  path: '/admin/config/commerce-paystack'
+  defaults:
+    _form: \Drupal\chessbet\Form\PaystackConfigForm
+    _title: 'Configure Commerce Paystack API and Transaction charges'
+  requirements:
+    _permission: 'administer commerce-paystack'
