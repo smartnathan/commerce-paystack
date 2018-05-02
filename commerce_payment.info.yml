@@ -1,4 +1,4 @@
-name: 'Paystack Payment Module for Drupal 8'
+name: 'Commerce Paystack Module for Drupal 8'
 description: 'Implements PayStack payment services for use with Drupal Commerce.'
 package: 'Commerce (contrib)'
 type: module
