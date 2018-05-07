@@ -6,7 +6,7 @@ use Drupal;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class PaystackConfigForm extends ConfigFormBase {
+class CommercePaystackConfigForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}

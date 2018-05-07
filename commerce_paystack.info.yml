@@ -4,9 +4,9 @@ package: 'Commerce (contrib)'
 type: module
 core: 8.x
 version: '8.x-1.1'
-dependencies:
-  - commerce
-  - commerce_ui
-  - commerce_payment
-  - commerce_order
-  - drupal: ctools
+# dependencies:
+#   - commerce
+#   - commerce_ui
+#   - commerce_payment
+#   - commerce_order
+#   - drupal: ctools

@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class PaystackController extends ControllerBase {
+class CommercePaystackController extends ControllerBase {
 
 
 }

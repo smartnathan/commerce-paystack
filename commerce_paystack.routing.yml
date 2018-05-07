@@ -9,7 +9,7 @@ commerce_paystack.admin:
 commerce_paystack.admin_configuration:
   path: '/admin/config/commerce-paystack'
   defaults:
-    _form: \Drupal\chessbet\Form\PaystackConfigForm
+    _form: \Drupal\commerce_paystack\Form\CommercePaystackConfigForm
     _title: 'Configure Commerce Paystack API and Transaction charges'
   requirements:
     _permission: 'administer commerce-paystack'
