@@ -1,0 +1,43 @@
+<?php
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Adds the PayStack logo.
+ */
+function commerce_paystack_form_commerce_checkout_form_alter(&$form, &$form_state) {
+  // If this checkout form contains the payment method radios...
+  if (empty($form['commerce_payment']['payment_method']['#options'])) {
+    return;
+  }
+
+  // Loop over its options array looking for a PayStack option.
+  foreach ($form['commerce_payment']['payment_method']['#options'] as $key => &$value) {
+    list($method_id) = explode('|', $key);
+    // If we find PayStack..
+    if ($method_id == 'paystack') {
+      $path = url('<front>', array('absolute' => TRUE)) . '/' . drupal_get_path('module', 'commerce_paystack') . '/paystack.png';
+      $value .= "<br/><img style='width: 200px; height: auto' src = '$path'/>";
+      break;
+    }
+  }
+}
+
+/**
+ * Implements hook_commerce_payment_method_info_alter().
+ */
+function commerce_paystack_commerce_payment_method_info_alter(&$payment_methods) {
+  // Set the payment form to auto-submit if standard mode is used.
+  $instance = commerce_payment_method_instance_load('paystack|commerce_payment_paystack');
+
+  // This happens when the module is first enabled.
+  if (!isset($instance['settings']['mode'])) {
+    return;
+  }
+
+  if ($instance['settings']['mode'] == 'standard') {
+    $payment_methods['paystack']['offsite_autoredirect'] = TRUE;
+  }
+  else {
+    $payment_methods['paystack']['offsite_autoredirect'] = FALSE;
+  }
+}
