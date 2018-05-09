@@ -44,7 +44,7 @@ class CommercePaystackConfigForm extends ConfigFormBase {
     ];
 
     $form['currency_code'] = [
-      '#type' => 'texxfield',
+      '#type' => 'textfield',
       '#required' => true,
       '#title' => $this->t('Currency Code'),
       '#description' => $this->t('Enter your currency code'),

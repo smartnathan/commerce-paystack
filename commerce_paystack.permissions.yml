@@ -1,7 +1,3 @@
-administer paystack:
-  title: 'Administer Paystack'
-  description: 'Administer Paystack configuratiion'
-
 administer commerce-paystack:
   title: 'Administer Commerce Paystack'
-  description: 'Administer Commerce Paystack configuratiion'
+  description: 'Administer Commerce Paystack configuration'
